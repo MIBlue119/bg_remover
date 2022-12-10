@@ -33,7 +33,7 @@ exe = EXE(pyz,
           strip=False,
           upx=False,
           console=False,
-          icon='installer/resources/images/bg_remover.ico' 
+          icon='./bg_remover.ico' 
           )
 
 coll = COLLECT(exe,
