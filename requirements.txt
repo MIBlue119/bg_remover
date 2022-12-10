@@ -1,3 +1,4 @@
 Pillow
 rembg
 pyinstaller==4.10
+opencv-python==4.5.5.64

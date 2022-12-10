@@ -12,8 +12,9 @@ pathex = []
 
 a = Analysis(['app.py'],
              pathex=pathex,
-             binaries=[]+collect_dynamic_libs("rembg"),
-             datas= []+collect_data_files('rembg', include_py_files=True, subdir=None, excludes=None, includes=None),
+             binaries=[]+collect_dynamic_libs("rembg")+collect_dynamic_libs("cv2")+collect_dynamic_libs("scipy")+,
+             datas= []+collect_data_files('rembg', include_py_files=True, subdir=None, excludes=None, includes=None)+
+             collect_data_files('scipy', include_py_files=True, subdir=None, excludes=None, includes=None),
              hiddenimports=['icecream'],
              hookspath=["installer/pyinstaller-hooks"], 
              runtime_hooks=[],

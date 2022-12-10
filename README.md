@@ -14,3 +14,10 @@ $ pip install requirements.txt
 ```
 $python app.py
 ```
+
+## Package with pyinstall
+```
+$pyinstaller app_windows.spec -y --onedir --windowed
+```
+- Fix the error caused by scipy.libs not found 
+    - Copy the `scipy.libs` directory under the envs's `Lib/site-packages` to the `dist/bg_remover`
